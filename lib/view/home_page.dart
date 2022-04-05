@@ -23,7 +23,7 @@ class _HomePageState extends State<HomePage> {
         // これは、アプリ内で使用されなくなったときに、ストリームの状態とストリームの破棄を自動的に管理するのに役立ちます。
         body: StreamBuilder(
           stream: products.snapshots(),
-          builder: (context, AsyncSnapshot<QuerySnapshot> streamSnapshot) {
+          builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> streamSnapshot) {
             if (streamSnapshot.hasData) {
               // FireStoreの値をリスト形式で表示
               return ListView.builder(
