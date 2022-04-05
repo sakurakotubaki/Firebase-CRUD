@@ -9,11 +9,11 @@ class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
 }
-
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     final products = context.watch<ProductModel>();
+
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
